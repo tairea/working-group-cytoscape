@@ -29,6 +29,14 @@ const edges = recommendations.matches.map((match, index) => ({
   },
 }));
 
+document.addEventListener("DOMContentLoaded", () => {
+  const cyContainer = document.getElementById("cy");
+  if (!cyContainer) {
+    console.error("Element with ID 'cy' not found.");
+    return;
+  }
+});
+
 const cy = cytoscape({
   container: document.getElementById("cy"),
   elements: {
@@ -601,17 +609,17 @@ document.getElementById("members").addEventListener("click", () => {
 document.getElementById("ai").addEventListener("click", () => {
   currentView = "ai";
 
+  console.log("cy", cy);
+
   // Update edges with matches data again
   cy.add(edges);
 
   // Apply a layout to the selected elements
-  const layout = cy.layout({
+  cy.layout({
     name: "circle", // Specify the layout name you want to use
     animate: true,
     fit: true, // Whether to fit to viewport
     padding: 70, // Padding around layout
     duration: 1000, // Duration of the animation in milliseconds
-  });
-
-  layout.run();
+  }).run();
 });

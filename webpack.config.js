@@ -1,23 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development", // Set the mode to development
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
-  ],
+  mode: "development",
   devServer: {
-    static: {
-      directory: path.join(__dirname, "public"),
-    },
+    static: path.join(__dirname, "dist"),
     compress: true,
     port: 8080,
   },
@@ -35,22 +28,19 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "images/",
-            },
-          },
-        ],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
-  //   performance: {
-  //     hints: "warning",
-  //     maxEntrypointSize: 512000, // 500 KiB
-  //     maxAssetSize: 512000, // 500 KiB
-  //   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public", to: "", globOptions: { ignore: ["**/index.html"] } },
+      ],
+    }),
+  ],
 };
