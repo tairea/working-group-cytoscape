@@ -8,6 +8,18 @@ import { recommendations } from "./recommendations-v2";
 cytoscape.use(cytoscapeCola);
 cytoscape.use(cytoscapeQtip);
 
+// UI elements
+const name = document.getElementById("name");
+const name1 = document.getElementById("n1");
+const values = document.getElementById("values");
+const vision = document.getElementById("vision");
+const vehicles = document.getElementById("vehicles");
+// hide ui
+name.style.opacity = "0";
+values.style.opacity = "0";
+vision.style.opacity = "0";
+vehicles.style.opacity = "0";
+
 // NODES for graph
 const nodes = people.map((person) => ({
   data: {
@@ -28,14 +40,6 @@ const edges = recommendations.matches.map((match, index) => ({
     potential: match.potential,
   },
 }));
-
-document.addEventListener("DOMContentLoaded", () => {
-  const cyContainer = document.getElementById("cy");
-  if (!cyContainer) {
-    console.error("Element with ID 'cy' not found.");
-    return;
-  }
-});
 
 const cy = cytoscape({
   container: document.getElementById("cy"),
@@ -105,20 +109,27 @@ cy.on("tap", "node", async function (event) {
   const values = personData.values;
   const vision = personData.vision;
   const vehicles = personData.vehicles;
+  const person = personData.person;
 
   // Hide all other nodes, edges, and labels
   cy.elements().not(node).style({
     display: "none",
   });
+  // Remove custom labels
+  document.querySelectorAll(".edge-label").forEach((el) => el.remove());
 
   // hide node label
   node.style({
     "text-opacity": 0,
   });
 
-  // Hide the other buttons
+  // Hide UI
   document.getElementById("members").style.opacity = "0";
   document.getElementById("ai").style.opacity = "0";
+  document.getElementById("wg").style.opacity = "0";
+  // Show UI
+  name.style.opacity = "1";
+  name1.textContent = person.name.toUpperCase();
 
   // Show the zoom-out button
   document.getElementById("zoom-out").style.opacity = "1";
@@ -144,6 +155,25 @@ cy.on("tap", "node", async function (event) {
     },
   ];
 
+  // Create the mask element
+  const mask = svg.append("mask").attr("id", "seeThroughMask");
+
+  // Define the mask content
+  mask
+    .append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("fill", "white");
+
+  mask
+    .append("circle")
+    .attr("cx", nodePosition.x)
+    .attr("cy", nodePosition.y)
+    .attr("r", nodeSize / 1.55)
+    .attr("fill", "black");
+
   const layerWidths = [radius_3, radius_2, radius_1, nodeSize / 2]; // Define your layer widths here
   const len = layerWidths.length;
 
@@ -157,7 +187,44 @@ cy.on("tap", "node", async function (event) {
     .attr("cy", nodePosition.y)
     .attr("r", 0) // Start with a radius of 0 for animation
     .attr("stroke", "grey")
-    .attr("stroke-opacity", 0.3);
+    .attr("stroke-opacity", 0.3)
+    .attr("mask", "url(#seeThroughMask)")
+    .on("mouseover", function (event, d) {
+      // dont do anything if ohvering person
+      if (d.onion === "person") return;
+
+      // Set the fill of the hovered circle to grey
+      select(this).attr("fill", "#eee");
+
+      // other rings not mousedover fill white
+      selectAll(".onion")
+        .filter(function () {
+          return this !== event.target;
+        })
+        .attr("fill", "white");
+
+      // Show UI
+      if (d.onion === "values") {
+        document.getElementById("values").style.opacity = "1";
+        document.getElementById("vision").style.opacity = "0";
+        document.getElementById("vehicles").style.opacity = "0";
+      } else if (d.onion === "vision") {
+        document.getElementById("values").style.opacity = "0";
+        document.getElementById("vision").style.opacity = "1";
+        document.getElementById("vehicles").style.opacity = "0";
+      } else if (d.onion === "vehicles") {
+        document.getElementById("values").style.opacity = "0";
+        document.getElementById("vision").style.opacity = "0";
+        document.getElementById("vehicles").style.opacity = "1";
+      }
+    })
+    .on("mouseout", function (event, d) {
+      // Set the fill of the hovered circle back to none
+      select(this).attr("fill", "none");
+      document.getElementById("values").style.opacity = "0";
+      document.getElementById("vision").style.opacity = "0";
+      document.getElementById("vehicles").style.opacity = "0";
+    });
 
   const pointsOfPassion = layers
     .selectAll(".passion")
@@ -353,6 +420,7 @@ cy.on("tap", "edge", async function (event) {
     animate: true,
     fit: true,
     duration: 1000,
+    padding: 50,
   });
 
   layout.run();
@@ -366,6 +434,7 @@ cy.on("tap", "edge", async function (event) {
   labelContainer.style.padding = "15px";
   labelContainer.style.zIndex = "9999";
   labelContainer.style.width = "500px";
+  labelContainer.style.fontSize = "0.9rem";
   labelContainer.innerHTML = `
   <div style="display: flex; justify-content: space-between; align-items: center;">  
 		<strong>AI Suggestions <span style="font-weight:600;font-size:10px;color:#ccc">(ChatGPT-4o)</span></strong>
@@ -547,10 +616,11 @@ document.getElementById("zoom-out").addEventListener("click", () => {
     "text-opacity": 1,
   });
 
-  // Hide the zoom-out button
+  // Hide UI
   document.getElementById("zoom-out").style.opacity = "0";
+  name.style.opacity = "0";
 
-  // Show other buttons
+  // Show UI
   document.getElementById("members").style.opacity = "1";
   document.getElementById("ai").style.opacity = "1";
   document.getElementById("wg").style.opacity = "1";
@@ -608,8 +678,6 @@ document.getElementById("members").addEventListener("click", () => {
 // ================== AI BUTTON ==================
 document.getElementById("ai").addEventListener("click", () => {
   currentView = "ai";
-
-  console.log("cy", cy);
 
   // Update edges with matches data again
   cy.add(edges);
