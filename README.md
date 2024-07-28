@@ -1,12 +1,10 @@
 # The idea
 
-This is a prototype app for how an ai might be used to match potential collaborators/conference attendees/etc based on some similar interests/topics that could be captured from each person via a pre-workshop/conference survey perhaps.
+This is a prototype app for how an ai might be used to match potential collaborators/conference attendees/etc. based on some similar interests/topics that could be captured from each person via a pre-workshop/conference survey perhaps.
 
-most of the ui is done, but the ai was one through a manual chat with chatgpt-4o and people information email through for their profiles.
+most of the ui is done, but the ai recommendations were generated manually via chatgpt chat responses that i hardcoded into this prototype.
 
-but it wouldnt take much to improve on this to make it more robust for an actual event/org/conference/etc.
-
----
+but it wouldnt take much to improve on this to allow attendees/members to add profile info via a database then add an openai api call to make it more dynamic for an actual event/org/conference/etc.
 
 ## How to load the demo
 
@@ -15,8 +13,6 @@ but it wouldnt take much to improve on this to make it more robust for an actual
 - npm start
 
 replace people.js and recommendations.js with your own, or better yet capture them programmatically
-
----
 
 ## Screenshots
 
