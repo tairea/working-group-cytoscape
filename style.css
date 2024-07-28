@@ -1,0 +1,119 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.person-chart {
+  pointer-events: all;
+}
+.flex {
+  display: flex;
+}
+
+#wg {
+  position: fixed;
+  top: 15%;
+  left: 25px;
+  z-index: 9999;
+  color: #444;
+}
+
+#wg h1 {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+}
+
+#wg h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 5px;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: opacity 0.5s;
+}
+
+#flag {
+  /* margin-left: 250px; */
+}
+
+#members {
+  position: fixed;
+  top: calc(50%);
+  left: 25px;
+}
+#ai {
+  position: fixed;
+  top: calc(50% + 70px);
+  left: 25px;
+}
+
+#zoom-out {
+  position: fixed;
+  top: calc(50%);
+  right: 25px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: white;
+}
+
+.button {
+  position: fixed;
+  z-index: 9999;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 15px 40px;
+  transition: opacity 0.5s;
+}
+/* Add hover effect */
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust shadow as needed */
+}
+#cy-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#cy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#created-by {
+  position: fixed;
+  font-family: "Montserrat", sans-serif;
+  z-index: 9999;
+  bottom: 20px;
+  right: 25px;
+  font-size: 0.7rem;
+  text-align: center;
+  /* make faded */
+  opacity: 0.5;
+}
+
+#logo {
+  opacity: 0.5;
+}
+
+.edge-label {
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+}
