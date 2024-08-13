@@ -38,6 +38,52 @@ body {
   /* margin-left: 250px; */
 }
 
+#ai-summary-content {
+  position: fixed;
+  top: 10%;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 0;
+  color: #444;
+  width: auto;
+  transition: opacity 0.5s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 70%;
+  overflow-y: auto;
+  /* border: solid 1px green; */
+  height: 100%;
+}
+
+.flex-bullet {
+  display: flex;
+}
+
+.flex-bullet p {
+  width: 70%;
+}
+
+.peeps {
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.peeps img {
+  padding: 2px;
+}
+
+#ai-summary-content h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+#ai-summary-content li {
+  padding: 5px;
+}
+
 #name {
   position: fixed;
   top: 20%;
@@ -88,9 +134,14 @@ body {
   margin: 0px;
   padding-left: 10px;
 }
-#ai {
+#ai-summary {
   position: fixed;
   top: calc(50% + 70px);
+  left: 25px;
+}
+#ai {
+  position: fixed;
+  top: calc(50% + 140px);
   left: 25px;
 }
 
