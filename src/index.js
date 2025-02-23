@@ -3,7 +3,7 @@ import { select, selectAll } from "d3-selection";
 import cytoscapeCola from "cytoscape-cola";
 import cytoscapeQtip from "cytoscape-qtip";
 import { people } from "./people";
-import { recommendations } from "./recommendations-v2";
+import { recommendations } from "./recommendations-v4";
 
 cytoscape.use(cytoscapeCola);
 cytoscape.use(cytoscapeQtip);
@@ -141,9 +141,10 @@ cy.on("tap", "node", async function (event) {
   // create circles around the node
   const nodePosition = node.renderedPosition();
   const nodeSize = node.renderedOuterWidth();
-  const radius_1 = nodeSize * 1.5;
-  const radius_2 = nodeSize * 2.5;
-  const radius_3 = nodeSize * 3.5;
+  const radius_1 = nodeSize * 2;
+  const radius_2 = nodeSize * 1.5;
+  const radius_3 = nodeSize * 1;
+  const radius_4 = nodeSize * 0.5;
 
   const data = [
     { onion: "person", children: [] },
@@ -171,10 +172,10 @@ cy.on("tap", "node", async function (event) {
     .append("circle")
     .attr("cx", nodePosition.x)
     .attr("cy", nodePosition.y)
-    .attr("r", nodeSize / 1.55)
+    .attr("r", nodeSize * 1.4)
     .attr("fill", "black");
 
-  const layerWidths = [radius_3, radius_2, radius_1, nodeSize / 2]; // Define your layer widths here
+  const layerWidths = [radius_4, radius_3, radius_2, radius_1]; // Define your layer widths here
   const len = layerWidths.length;
 
   const layers = svg.selectAll(".onion").data(data.reverse()).enter();
@@ -190,18 +191,25 @@ cy.on("tap", "node", async function (event) {
     .attr("stroke-opacity", 0.3)
     .attr("mask", "url(#seeThroughMask)")
     .on("mouseover", function (event, d) {
-      // dont do anything if ohvering person
+      // dont do anything if hovering person
       if (d.onion === "person") return;
 
-      // Set the fill of the hovered circle to grey
-      select(this).attr("fill", "#eee");
+      // Set the fill of the hovered circle to grey with some transparency
+      select(this).attr("fill", "rgba(238, 238, 238, 0.8)");
 
-      // other rings not mousedover fill white
+      // other rings not mousedover fill white with some transparency
       selectAll(".onion")
         .filter(function () {
-          return this !== event.target;
+          return this !== event.target && select(this).datum().onion !== "person";
         })
-        .attr("fill", "white");
+        .attr("fill", "rgba(255, 255, 255, 0.8)");
+
+      // Make sure the person circle never gets filled
+      selectAll(".onion")
+        .filter(function() {
+          return select(this).datum().onion === "person";
+        })
+        .attr("fill", "none");
 
       // Show UI
       if (d.onion === "values") {
@@ -219,8 +227,8 @@ cy.on("tap", "node", async function (event) {
       }
     })
     .on("mouseout", function (event, d) {
-      // Set the fill of the hovered circle back to none
-      select(this).attr("fill", "none");
+      // Set the fill of all circles back to none
+      selectAll(".onion").attr("fill", "none");
       document.getElementById("values").style.opacity = "0";
       document.getElementById("vision").style.opacity = "0";
       document.getElementById("vehicles").style.opacity = "0";
@@ -269,10 +277,10 @@ cy.on("tap", "node", async function (event) {
     const updatedPosition = node.renderedPosition();
     const updatedNodeSize = node.renderedOuterWidth();
     const updatedLayerWidths = [
-      updatedNodeSize * 3.5,
-      updatedNodeSize * 2.5,
+      updatedNodeSize * 2,
       updatedNodeSize * 1.5,
-      updatedNodeSize / 2,
+      updatedNodeSize * 1,
+      updatedNodeSize * 0.5,
     ];
 
     const t = Math.min(elapsed / duration, 1); // calculate progress (0 to 1)

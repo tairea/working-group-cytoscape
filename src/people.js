@@ -464,4 +464,229 @@ export const people = [
       "Ephyto Project-South West Pacific Rep & Coutnry Lead",
     ],
   },
+  // ester & tama
+  {
+    person: {
+      name: "Esther & Tama Heather",
+      photo: "esther-tama.jpg",
+    },
+    values: ["Stewardship", "Diligence", "Respect", "Well-being"],
+    vision: [
+      "Legacy & future for children",
+      "Pa Enua",
+      "Innovation & Creativity",
+      "Holistic and targeted solutions",
+      "Sustaiability and resilience",
+    ],
+    vehicles: ["JungleFarm"],
+  },
+  // jamie
+  {
+    person: {
+      name: "Jamie Short",
+      photo: "jamie.jpg",
+    },
+    values: ["Respect for nature", "Respect for all living things"],
+    vision: [
+      "Organic movement",
+      "Investment in growing start from education",
+      "Kinder farming",
+      "Soil care",
+      "Permaculture",
+      "Cooperation between people/agencies",
+      "Sustainable systems",
+      "Regulated supermarket industry to product growers and consumers",
+      "Resilient food system",
+    ],
+    vehicles: [
+      "Farmers for a strategy and organise",
+      "Project to overhaul the agriculture sector to implement sustainable organic farming practices from legislative changes to grass roots",
+      "Community cooperatives",
+    ],
+  },
+  // matthew
+  {
+    person: {
+      name: "Matthew Rima",
+      photo: "matthew-r.jpg",
+    },
+    values: [
+      "God",
+      "Support",
+      "Friends",
+      "Honesty",
+      "K.I.S.S",
+      "Parenting",
+      "Respect",
+      "Identity",
+      "Family",
+    ],
+    vision: [
+      "Clean island",
+      "Healthy island",
+      "Educator",
+      "Clean & green kuki",
+      "Environment",
+      "Clean & green eating",
+      "Family value",
+      "Motivator",
+      "Clean ocean",
+    ],
+    vehicles: [
+      "Education",
+      "Online course",
+      "Inhouse capacity building",
+      "UNEP",
+      "Sports club",
+      "UON",
+    ],
+  },
+  // jackie rongo
+  {
+    person: {
+      name: "Jackie Rongo",
+      photo: "jackie-r.jpg",
+    },
+    values: [
+      "Integrity (honesty)",
+      "Kindness (generosity)",
+      "Love",
+      "Service",
+      "Family",
+    ],
+    vision: [
+      "Organisational management (time & discipline)",
+      "Communication",
+      "Fudnraising",
+      "Community engagement",
+      "Student & Education",
+    ],
+    vehicles: [
+      "Korero o te Orau",
+      "Atuianga ki te Tango Programme (AKTT)",
+      "Traditional village ecosystem",
+      "Cook Islands Volleyball Federation",
+      "Rising stars (healty living programme via netball, rugby, volleyball)",
+      "Tobacco control committee",
+    ],
+  },
+  // teina rongo
+  {
+    person: {
+      name: "Teina Rongo",
+      photo: "teina-r.jpg",
+    },
+    values: [
+      "Trust",
+      "Faith",
+      "Love",
+      "Compassion",
+      "Hardwork",
+      "Resilience",
+      "Integrity (honesty)",
+    ],
+    vision: [
+      "Big picture knowledge systems (Indigenous & Contemporary)",
+      "Community & village initiatives",
+      "Educator & mentor (spiritual, social, environmental & physical awareness)",
+      "Conservation",
+    ],
+    vehicles: [
+      "Korero o te Orau",
+      "Atuianga ki te Tango Programme (AKTT)",
+      "Operation Taramea",
+      "Lecturer at Takamoa Theological College",
+      "Mentoring",
+      "Marine & Bioloist Environmental Consultant",
+      "NCD Taskforce (udner GCF)",
+      "Rising stars (healty living programme via netball, rugby, volleyball)",
+    ],
+  },
+  // andre jensen
+  {
+    person: {
+      name: "Andre Jensen",
+      photo: "andre.jpg",
+    },
+    values: [
+      "Support",
+      "Agriculture knowledge",
+      "Social responsibility",
+      "Business management",
+      "Family",
+      "Technical skills",
+      "Honesty & openess",
+      "Critical thinking",
+    ],
+    vision: [
+      "Food security & sovereignty",
+      "Traditional knowledge",
+      "Empowering farmer youths",
+      "Thriving cooperative model",
+      "Economic prosperity through agriculture",
+      "Entrepreneurship & community development",
+      "Passion for growing food technology",
+      "Leave a legacy for future generations",
+    ],
+    vehicles: [
+      "Jensen Consulting",
+      "Ngati Kainuku",
+      "Farming business",
+      "My restaurant, cafes, markets",
+    ],
+  },
+  // pa maoate
+  {
+    person: {
+      name: "Pa Maoate",
+      photo: "pa.jpg",
+    },
+    values: ["Trust", "Love", "Honesty", "Health", "Family"],
+    vision: [
+      "Local customs Eg. Planting with Arapo",
+      "Sharing knowledge",
+      "Healthy living (organic)",
+      "Assistance",
+      "Empowerment",
+    ],
+    vehicles: ["Community inclusivity", "Grant assistance", "Mentoring"],
+  },
+  // latishia
+  {
+    person: {
+      name: "Latishia Maui-Mataora",
+      photo: "latishia.jpg",
+    },
+    values: ["Honesty", "Family", "Transparency", "Integrity", "Inclusive", "Health", "Support", ],
+    vision: [
+      "Innovation",
+      "Building relationships/collaboration",
+      "Capacity building",
+      "Networking",
+      "Legacy planning",
+      "People focus",
+      "Education and awareness",
+      "Creating career pathways",
+    ],
+    vehicles: ["Developing an emerging school", "Smart Agri-solutions", "Community based projects", "Investments", "Small business management", "Organic farming", "Subsistence farming", "Building on STEM subjects"],
+  },
+  // rev mata
+  {
+    person: {
+      name: "Rev. Mata Tumu-Makara",
+      photo: "mata.jpg",
+    },
+    values: ["God", "Family", "Church", "Friendship", "Love"],
+    vision: [
+      "People",
+      "Team",
+      "Cook Islanders",
+      "Mitiaro",
+      "Puaikura",
+      "Spiritual wellness",
+      "Physical wellness",
+      "Emotional wellness",
+    ],
+    vehicles: ["Pastor", "Counselling", "Teaching"],
+  },
 ];

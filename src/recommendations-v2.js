@@ -1,303 +1,279 @@
 export const recommendations = {
-  matches: [
+ matches: [
     {
       person1: "Ian Tairea",
-      person2: "Nina Neubauer",
-      ranking: 0.85,
+      person2: "Esther & Tama Heather",
+      ranking: 0.90,
       reason:
-        "Ian focuses on youth and technology, while Nina emphasizes sustainability and community engagement. Their common interest in leveraging technology for community and youth engagement presents strong collaboration opportunities.",
+        "Ian and Esther & Tama both emphasize innovative community development—Ian through tech‐driven education and sustainable village projects, and Esther & Tama through holistic, resilient solutions rooted in the Pa Enua vision.",
       potential: [
-        "Integrating sustainable agricultural practices into e-learning platforms for youth education in Mauke.",
-        "Developing community engagement programs focused on sustainable practices and technological advancements.",
-      ],
-      summary:
-        "Ian and Nina would complement each other because of their shared interest in technology and community engagement. Possible collaborations could be integrating sustainable agricultural practices into e-learning platforms for youth education and developing community engagement programs focused on sustainable practices and technological advancements.",
+        "Collaborate on digital education platforms integrated with sustainable village initiatives.",
+        "Develop tech-driven community resilience and agricultural innovation projects."
+      ]
     },
     {
       person1: "Ian Tairea",
-      person2: "Bianca Herman",
-      ranking: 0.83,
+      person2: "Piriariki Maao",
+      ranking: 0.88,
       reason:
-        "Ian and Bianca both emphasize youth empowerment and the use of technology for growth. They share values of compassion and community service.",
+        "Ian and Piriariki share a passion for leveraging technology to empower youth and drive innovation in sustainable agriculture—combining digital tools with local expertise.",
       potential: [
-        "Developing wellness and personal development coaching programs within the e-learning platform.",
-        "Creating a mentorship initiative that combines technology and personal growth for youth in underrepresented regions.",
-      ],
-      summary:
-        "Ian and Bianca would complement each other because of their shared values of youth empowerment and the use of technology for growth. Possible collaborations could be developing wellness and personal development coaching programs within the e-learning platform and creating a mentorship initiative that combines technology and personal growth for youth in underrepresented regions.",
+        "Create e-learning modules focused on sustainable farming and community development.",
+        "Integrate tech solutions into local agricultural and educational initiatives."
+      ]
+    },
+    {
+      person1: "Henry Herman",
+      person2: "Gina Tavioni-Bamber",
+      ranking: 0.87,
+      reason:
+        "Henry and Gina both value community service, traditional practices, and leadership. Their combined emphasis on faith, mentoring, and cultural education makes them ideal partners for inclusive community programs.",
+      potential: [
+        "Launch joint mentorship programs in indigenous cultural practices and leadership.",
+        "Develop community outreach initiatives that integrate traditional arts with modern empowerment strategies."
+      ]
     },
     {
       person1: "Henry Herman",
       person2: "Victor Mataora",
-      ranking: 0.84,
+      ranking: 0.86,
       reason:
-        "Henry and Victor prioritize community service and faith. They both envision empowering communities through traditional knowledge and innovative practices.",
+        "Henry and Victor both share a commitment to integrity and traditional knowledge. Their visions—Henry’s focus on people‐centered leadership and Victor’s on regenerative farming—complement each other well.",
       potential: [
-        "Creating community resilience programs that integrate traditional knowledge and regenerative farming practices.",
-        "Developing faith-based community initiatives that empower and uplift local families.",
-      ],
-      summary:
-        "Henry and Victor would complement each other because of their shared commitment to community service and faith. Possible collaborations could be creating community resilience programs that integrate traditional knowledge and regenerative farming practices and developing faith-based community initiatives that empower and uplift local families.",
+        "Develop regenerative farming programs with community-based learning.",
+        "Establish cultural education workshops on traditional agricultural practices."
+      ]
     },
     {
-      person1: "Henry Herman",
-      person2: "Liz Nootai",
-      ranking: 0.82,
+      person1: "Victor Mataora",
+      person2: "Andre Jensen",
+      ranking: 0.85,
       reason:
-        "Henry and Liz both value faith and family. They have a shared vision of faithful service and community fellowship.",
+        "Victor and Andre both center on sustainable agriculture and food security. They blend traditional knowledge with modern cooperative business models to support resilient, locally driven food systems.",
       potential: [
-        "Collaborating on community outreach and mentorship programs fostering spiritual growth.",
-        "Developing inclusive community fellowship activities that promote faith and service.",
-      ],
-      summary:
-        "Henry and Liz would complement each other because of their shared values of faith and family. Possible collaborations could be collaborating on community outreach and mentorship programs fostering spiritual growth and developing inclusive community fellowship activities that promote faith and service.",
+        "Collaborate on projects to enhance local food security through regenerative farming.",
+        "Develop cooperative models that empower young farmers and promote traditional agricultural methods."
+      ]
     },
     {
       person1: "Victor Mataora",
       person2: "Nina Neubauer",
-      ranking: 0.87,
-      reason:
-        "Victor and Nina both emphasize sustainability and community-centered approaches. They also value traditional knowledge.",
-      potential: [
-        "Developing sustainable agriculture projects that promote food security and healthy living.",
-        "Creating educational programs that teach traditional knowledge and regenerative farming practices.",
-      ],
-      summary:
-        "Victor and Nina would complement each other because of their shared emphasis on sustainability and community-centered approaches. Possible collaborations could be developing sustainable agriculture projects that promote food security and healthy living and creating educational programs that teach traditional knowledge and regenerative farming practices.",
-    },
-    {
-      person1: "Victor Mataora",
-      person2: "Fred Nicholas",
-      ranking: 0.8,
-      reason:
-        "Victor and Fred value traditional knowledge and environmental sustainability. They both focus on food security and public health.",
-      potential: [
-        "Collaborating on public health initiatives that integrate traditional agricultural practices.",
-        "Developing environmental sustainability projects focused on food security in the Cook Islands.",
-      ],
-      summary:
-        "Victor and Fred would complement each other because of their shared values of traditional knowledge and environmental sustainability. Possible collaborations could be collaborating on public health initiatives that integrate traditional agricultural practices and developing environmental sustainability projects focused on food security in the Cook Islands.",
-    },
-    {
-      person1: "Ben Koteka",
-      person2: "Kevin Iro",
-      ranking: 0.79,
-      reason:
-        "Ben and Kevin both prioritize health, fitness, and community development. They share a vision for empowering communities through sports and wellness.",
-      potential: [
-        "Creating health and wellness programs for youth leveraging sports and fitness.",
-        "Developing community fitness initiatives that build resilience and promote active living.",
-      ],
-      summary:
-        "Ben and Kevin would complement each other because of their shared priorities of health, fitness, and community development. Possible collaborations could be creating health and wellness programs for youth leveraging sports and fitness and developing community fitness initiatives that build resilience and promote active living.",
-    },
-    {
-      person1: "Ben Koteka",
-      person2: "Bianca Herman",
-      ranking: 0.78,
-      reason:
-        "Ben and Bianca share values of family and community empowerment. Both focus on youth development and holistic wellness.",
-      potential: [
-        "Developing sports and wellness programs integrating personal development coaching for youth.",
-        "Creating holistic wellness initiatives that engage youth in physical and personal growth activities.",
-      ],
-      summary:
-        "Ben and Bianca would complement each other because of their shared values of family and community empowerment. Possible collaborations could be developing sports and wellness programs integrating personal development coaching for youth and creating holistic wellness initiatives that engage youth in physical and personal growth activities.",
-    },
-    {
-      person1: "Gina Tavioni-Bamber",
-      person2: "Bianca Herman",
       ranking: 0.84,
       reason:
-        "Gina and Bianca both value authenticity and family. They share a vision for connecting generations and capacity building.",
+        "Victor and Nina share a vision for sustainable agriculture and community-centered education—both are committed to food security, regenerative practices, and self-sufficiency.",
       potential: [
-        "Collaborating on cultural and educational projects promoting Cook Islands art and family wellness.",
-        "Developing intergenerational programs that connect youth with traditional knowledge and modern practices.",
-      ],
-      summary:
-        "Gina and Bianca would complement each other because of their shared values of authenticity and family. Possible collaborations could be collaborating on cultural and educational projects promoting Cook Islands art and family wellness and developing intergenerational programs that connect youth with traditional knowledge and modern practices.",
+        "Implement sustainable farming initiatives with community training components.",
+        "Develop educational programs on self-sufficiency and regenerative agriculture."
+      ]
+    },
+    {
+      person1: "Ben Koteka",
+      person2: "Ben Maxwell",
+      ranking: 0.83,
+      reason:
+        "Ben Koteka and Ben Maxwell both prioritize family, youth empowerment, and community wellness. Their shared focus on sports, mentorship, and holistic health creates a strong foundation for collaboration.",
+      potential: [
+        "Establish youth sports and wellness programs emphasizing teamwork and integrity.",
+        "Launch community development projects centered on holistic health and mentorship."
+      ]
+    },
+    {
+      person1: "Ben Koteka",
+      person2: "Bianca Herman",
+      ranking: 0.82,
+      reason:
+        "Ben Koteka and Bianca share a commitment to community service and youth empowerment—Ben through sports and community initiatives, and Bianca via holistic wellness and indigenous knowledge.",
+      potential: [
+        "Develop integrated wellness and sports programs for youth.",
+        "Create community initiatives merging holistic coaching with team building."
+      ]
     },
     {
       person1: "Gina Tavioni-Bamber",
-      person2: "Fred Nicholas",
-      ranking: 0.78,
+      person2: "Liz Nootai",
+      ranking: 0.85,
       reason:
-        "Gina and Fred share values of family and cultural heritage. Both focus on promoting traditional knowledge and community health.",
+        "Gina and Liz both emphasize cultural heritage, faith-based community service, and educational outreach—fostering intergenerational collaboration in culture and spirituality.",
       potential: [
-        "Developing projects that integrate technology and traditional knowledge to promote cultural heritage.",
-        "Creating community health initiatives that leverage traditional practices for modern well-being.",
-      ],
-      summary:
-        "Gina and Fred would complement each other because of their shared values of family and cultural heritage. Possible collaborations could be developing projects that integrate technology and traditional knowledge to promote cultural heritage and creating community health initiatives that leverage traditional practices for modern well-being.",
+        "Collaborate on cultural arts and heritage education programs.",
+        "Develop community initiatives that integrate traditional practices with spiritual growth."
+      ]
+    },
+    {
+      person1: "Nina Neubauer",
+      person2: "Piriariki Maao",
+      ranking: 0.89,
+      reason:
+        "Nina and Piriariki both strongly focus on sustainable agriculture and innovation, aligning their visions for youth empowerment and food security.",
+      potential: [
+        "Collaborate on innovative agricultural projects with a focus on youth training.",
+        "Develop sustainable farming initiatives leveraging technology and research."
+      ]
+    },
+    {
+      person1: "Nina Neubauer",
+      person2: "Matthew Rima",
+      ranking: 0.84,
+      reason:
+        "Nina and Matthew both value sustainability and education—working toward clean, healthy communities through environmental initiatives and public health.",
+      potential: [
+        "Develop educational programs on sustainable living and clean energy.",
+        "Launch community projects aimed at environmental conservation and public health."
+      ]
+    },
+    {
+      person1: "Liz Nootai",
+      person2: "Kevin Iro",
+      ranking: 0.83,
+      reason:
+        "Liz and Kevin share faith-based leadership and a commitment to community service. Their combined focus on traditional knowledge and family values supports inclusive development initiatives.",
+      potential: [
+        "Create joint community outreach and mentorship programs.",
+        "Develop initiatives integrating faith, traditional practices, and modern business ventures."
+      ]
+    },
+    {
+      person1: "Liz Nootai",
+      person2: "Jackie Rongo",
+      ranking: 0.82,
+      reason:
+        "Liz and Jackie both emphasize integrity, community engagement, and educational outreach, making them natural partners for youth empowerment and service projects.",
+      potential: [
+        "Develop joint leadership and mentorship initiatives.",
+        "Launch community education programs focused on social and cultural empowerment."
+      ]
+    },
+    {
+      person1: "Bianca Herman",
+      person2: "Jamie Short",
+      ranking: 0.84,
+      reason:
+        "Bianca and Jamie share a commitment to sustainability and organic practices, aligning on innovative agricultural methods and holistic wellness.",
+      potential: [
+        "Collaborate on organic farming and community garden projects.",
+        "Develop holistic wellness programs integrating environmental and health initiatives."
+      ]
+    },
+    {
+      person1: "Lynne Samuel",
+      person2: "Fred Nicholas",
+      ranking: 0.80,
+      reason:
+        "Lynne and Fred both value family and integrity with an emphasis on traditional business practices and community support, setting the stage for collaborative economic initiatives.",
+      potential: [
+        "Develop community business mentorship and economic development projects.",
+        "Launch initiatives integrating traditional commerce with modern sustainability practices."
+      ]
     },
     {
       person1: "Lynne Samuel",
       person2: "Lyle & Natia Wichman",
-      ranking: 0.81,
-      reason:
-        "Lynne and Lyle & Natia both value community and family. They share a vision for sustainability and resourcefulness.",
-      potential: [
-        "Collaborating on community projects focusing on sustainable farming and resource management.",
-        "Developing family-oriented activities that promote cultural heritage and environmental sustainability.",
-      ],
-      summary:
-        "Lynne and Lyle & Natia would complement each other because of their shared values of community and family. Possible collaborations could be collaborating on community projects focusing on sustainable farming and resource management and developing family-oriented activities that promote cultural heritage and environmental sustainability.",
-    },
-    {
-      person1: "Lynne Samuel",
-      person2: "Kevin Iro",
       ranking: 0.79,
       reason:
-        "Lynne and Kevin both value family and community service. They share a vision for business ventures and flourishing communities.",
+        "Lynne and Lyle & Natia both emphasize family, community, and sustainability, making them strong partners for local business and agricultural resilience initiatives.",
       potential: [
-        "Developing community service projects that integrate business ventures with family and cultural activities.",
-        "Creating initiatives that support family values through economic and environmental sustainability projects.",
-      ],
-      summary:
-        "Lynne and Kevin would complement each other because of their shared values of family and community service. Possible collaborations could be developing community service projects that integrate business ventures with family and cultural activities and creating initiatives that support family values through economic and environmental sustainability projects.",
+        "Collaborate on community-based economic and agricultural development projects.",
+        "Develop local business programs focused on sustainable commerce and family support."
+      ]
     },
     {
       person1: "Lyle & Natia Wichman",
-      person2: "Fred Nicholas",
-      ranking: 0.8,
+      person2: "Jackie Rongo",
+      ranking: 0.80,
       reason:
-        "Lyle & Natia and Fred both value community and family. Their visions align on sustainability and resourcefulness.",
+        "Lyle & Natia and Jackie share a commitment to community, cultural heritage, and educational outreach, forming a robust basis for local collaborative initiatives.",
       potential: [
-        "Collaborating on sustainable farming and community resilience projects integrating family and cultural activities.",
-        "Developing resource management programs that promote sustainable practices and community well-being.",
-      ],
-      summary:
-        "Lyle & Natia and Fred would complement each other because of their shared values of community and family. Possible collaborations could be collaborating on sustainable farming and community resilience projects integrating family and cultural activities and developing resource management programs that promote sustainable practices and community well-being.",
+        "Launch community cultural heritage and education programs.",
+        "Develop initiatives that support local business development and intergenerational mentorship."
+      ]
     },
     {
       person1: "Lyle & Natia Wichman",
       person2: "Bianca Herman",
-      ranking: 0.79,
+      ranking: 0.85,
       reason:
-        "Lyle & Natia and Bianca share values of community and wellness. Both focus on sustainability and personal development.",
+        "Lyle & Natia and Bianca both value community, family, and sustainability, aligning their visions for holistic wellness and local empowerment.",
       potential: [
-        "Developing holistic wellness programs that integrate sustainable practices and community engagement.",
-        "Creating personal development initiatives that promote family and community resilience.",
-      ],
-      summary:
-        "Lyle & Natia and Bianca would complement each other because of their shared values of community and wellness. Possible collaborations could be developing holistic wellness programs that integrate sustainable practices and community engagement and creating personal development initiatives that promote family and community resilience.",
+        "Develop community-based wellness and sustainable agriculture projects.",
+        "Collaborate on initiatives focusing on family empowerment and local resilience."
+      ]
     },
     {
       person1: "Kevin Iro",
-      person2: "Fred Nicholas",
-      ranking: 0.82,
+      person2: "Ben Maxwell",
+      ranking: 0.84,
       reason:
-        "Kevin and Fred share values of family and community service. Their visions align on traditional knowledge and environmental sustainability.",
+        "Kevin and Ben share a commitment to faith, family, and sustainable community development, offering opportunities for collaborative business and educational ventures.",
       potential: [
-        "Collaborating on public health and environmental sustainability projects integrating traditional knowledge.",
-        "Developing initiatives that promote community health through traditional practices and modern innovations.",
-      ],
-      summary:
-        "Kevin and Fred would complement each other because of their shared values of family and community service. Possible collaborations could be collaborating on public health and environmental sustainability projects integrating traditional knowledge and developing initiatives that promote community health through traditional practices and modern innovations.",
-    },
-    {
-      person1: "Kevin Iro",
-      person2: "Bianca Herman",
-      ranking: 0.81,
-      reason:
-        "Kevin and Bianca share values of family and community service. Both focus on holistic wellness and personal development.",
-      potential: [
-        "Developing holistic wellness programs that integrate traditional knowledge and community engagement.",
-        "Creating personal development initiatives that foster community resilience and individual growth.",
-      ],
-      summary:
-        "Kevin and Bianca would complement each other because of their shared values of family and community service. Possible collaborations could be developing holistic wellness programs that integrate traditional knowledge and community engagement and creating personal development initiatives that foster community resilience and individual growth.",
+        "Develop joint initiatives on community business ventures and mentorship.",
+        "Launch programs integrating traditional values with modern sustainability practices."
+      ]
     },
     {
       person1: "Fred Nicholas",
-      person2: "Nina Neubauer",
-      ranking: 0.8,
+      person2: "Matthew Rima",
+      ranking: 0.85,
       reason:
-        "Fred and Nina share values of sustainability and community-centered approaches. Both focus on agricultural and environmental projects.",
+        "Fred and Matthew both emphasize family, technology, and environmental sustainability, forming a strong foundation for collaborative public health and agricultural initiatives.",
       potential: [
-        "Developing sustainable agricultural projects that promote community health and food security.",
-        "Creating environmental initiatives that engage the community in sustainable practices and education.",
-      ],
-      summary:
-        "Fred and Nina would complement each other because of their shared values of sustainability and community-centered approaches. Possible collaborations could be developing sustainable agricultural projects that promote community health and food security and creating environmental initiatives that engage the community in sustainable practices and education.",
+        "Collaborate on technology-driven public health projects.",
+        "Develop community programs focused on sustainable agriculture and food security."
+      ]
     },
     {
-      person1: "Ben Maxwell",
-      person2: "Piriariki Maao",
-      ranking: 0.82,
+      person1: "Fred Nicholas",
+      person2: "Pa Maoate",
+      ranking: 0.78,
       reason:
-        "Ben and Piriariki share values of integrity and community service. Their visions align on youth and environmental sustainability.",
+        "Fred and Pa share values of family, honesty, and community support, aligning their visions for a healthy and sustainable future.",
       potential: [
-        "Collaborating on youth development projects that integrate creative and innovative approaches to environmental sustainability.",
-        "Developing initiatives that promote smart and sustainable agriculture practices among youth.",
-      ],
-      summary:
-        "Ben and Piriariki would complement each other because of their shared values of integrity and community service. Possible collaborations could be collaborating on youth development projects that integrate creative and innovative approaches to environmental sustainability and developing initiatives that promote smart and sustainable agriculture practices among youth.",
-    },
-    {
-      person1: "Ben Maxwell",
-      person2: "Victor Mataora",
-      ranking: 0.81,
-      reason:
-        "Ben and Victor share values of integrity and community service. Both focus on youth development and traditional knowledge.",
-      potential: [
-        "Developing youth development projects that promote traditional knowledge and community well-being.",
-        "Creating educational programs that teach youth about traditional practices and modern sustainability techniques.",
-      ],
-      summary:
-        "Ben and Victor would complement each other because of their shared values of integrity and community service. Possible collaborations could be developing youth development projects that promote traditional knowledge and community well-being and creating educational programs that teach youth about traditional practices and modern sustainability techniques.",
+        "Develop community health initiatives integrating technology and traditional practices.",
+        "Collaborate on projects promoting sustainable living and food security."
+      ]
     },
     {
       person1: "Piriariki Maao",
-      person2: "Nina Neubauer",
-      ranking: 0.81,
-      reason:
-        "Piriariki and Nina share values of sustainability and innovation. Both focus on agricultural and environmental projects.",
-      potential: [
-        "Collaborating on innovative agricultural projects that promote community health and food security.",
-        "Developing environmental initiatives that engage the community in sustainable practices and education.",
-      ],
-      summary:
-        "Piriariki and Nina would complement each other because of their shared values of sustainability and innovation. Possible collaborations could be collaborating on innovative agricultural projects that promote community health and food security and developing environmental initiatives that engage the community in sustainable practices and education.",
-    },
-    {
-      person1: "Piriariki Maao",
-      person2: "Henry Herman",
+      person2: "Matthew Rima",
       ranking: 0.82,
       reason:
-        "Piriariki and Henry share values of integrity and community service. Both focus on agricultural and community resilience projects.",
+        "Piriariki and Matthew both value innovation, sustainability, and education—aligning on community-driven agricultural and environmental initiatives.",
       potential: [
-        "Developing community resilience projects that integrate innovative agricultural practices.",
-        "Creating initiatives that promote sustainable agriculture and community well-being.",
-      ],
-      summary:
-        "Piriariki and Henry would complement each other because of their shared values of integrity and community service. Possible collaborations could be developing community resilience projects that integrate innovative agricultural practices and creating initiatives that promote sustainable agriculture and community well-being.",
+        "Develop innovative agricultural practices for food security.",
+        "Collaborate on educational programs focused on sustainability and technology in farming."
+      ]
     },
     {
-      person1: "Liz Nootai",
-      person2: "Gina Tavioni-Bamber",
-      ranking: 0.8,
+      person1: "Teina Rongo",
+      person2: "Pa Maoate",
+      ranking: 0.82,
       reason:
-        "Liz and Gina share values of family and community service. Both focus on cultural heritage and community health.",
+        "Teina and Pa share values of trust, empowerment, and community service, aligning their visions for holistic and resilient community development.",
       potential: [
-        "Developing cultural heritage projects that integrate traditional knowledge and community service.",
-        "Creating community health initiatives that leverage traditional practices for modern well-being.",
-      ],
-      summary:
-        "Liz and Gina would complement each other because of their shared values of family and community service. Possible collaborations could be developing cultural heritage projects that integrate traditional knowledge and community service and creating community health initiatives that leverage traditional practices for modern well-being.",
+        "Develop joint mentorship and empowerment programs.",
+        "Collaborate on initiatives focused on sustainable living and health."
+      ]
     },
     {
-      person1: "Bianca Herman",
-      person2: "Liz Nootai",
+      person1: "Teina Rongo",
+      person2: "Kevin Iro",
       ranking: 0.81,
       reason:
-        "Bianca and Liz share values of family and community service. Both focus on holistic wellness and personal development.",
+        "Teina and Kevin both value faith, family, and traditional knowledge, offering opportunities for educational and conservation initiatives.",
       potential: [
-        "Developing holistic wellness programs that integrate community engagement and sustainability.",
-        "Creating personal development initiatives that foster family and community resilience.",
-      ],
-      summary:
-        "Bianca and Liz would complement each other because of their shared values of family and community service. Possible collaborations could be developing holistic wellness programs that integrate community engagement and sustainability and creating personal development initiatives that foster family and community resilience.",
+        "Collaborate on environmental conservation projects integrating traditional wisdom.",
+        "Develop mentorship programs that combine faith-based community service with modern business strategies."
+      ]
     },
-  ],
+    {
+      person1: "Andre Jensen",
+      person2: "Pa Maoate",
+      ranking: 0.80,
+      reason:
+        "Andre and Pa share values of family and community empowerment, aligning on economic and agricultural initiatives for local development.",
+      potential: [
+        "Collaborate on entrepreneurial ventures and agricultural development projects.",
+        "Develop community economic empowerment programs focusing on traditional and innovative practices."
+      ]
+    }
+  ]
 };
