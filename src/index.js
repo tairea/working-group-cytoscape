@@ -126,6 +126,7 @@ cy.on("tap", "node", async function (event) {
   // Hide UI
   document.getElementById("members").style.opacity = "0";
   document.getElementById("ai").style.opacity = "0";
+  document.getElementById("ai-summary").style.opacity = "0";
   document.getElementById("wg").style.opacity = "0";
   // Show UI
   name.style.opacity = "1";
@@ -400,6 +401,7 @@ cy.on("tap", "edge", async function (event) {
 
   document.getElementById("members").style.opacity = "0";
   document.getElementById("ai").style.opacity = "0";
+  document.getElementById("ai-summary").style.opacity = "0";
   document.getElementById("wg").style.opacity = "0";
 
   document.getElementById("zoom-out").style.opacity = "1";
@@ -610,58 +612,72 @@ cy.on("mouseout", "edge", (event) => {
 
 // ================== BACK BUTTON ==================
 document.getElementById("zoom-out").addEventListener("click", () => {
-  isEdgeView = false;
-
-  // Clear the contents of the SVG overlay
-  svg.selectAll("*").remove();
-
-  // Remove custom labels
-  document.querySelectorAll(".edge-label").forEach((el) => el.remove());
-
-  // Show all elements again
-  cy.elements().style({
-    display: "element",
-    "text-opacity": 1,
-  });
-
-  // Hide UI
-  document.getElementById("zoom-out").style.opacity = "0";
-  name.style.opacity = "0";
-
-  // Show UI
-  document.getElementById("members").style.opacity = "1";
-  document.getElementById("ai").style.opacity = "1";
-  document.getElementById("wg").style.opacity = "1";
-
-  if (currentView === "members") {
-    // fit
-    cy.animate({
-      fit: {
-        eles: cy.elements(),
-        padding: 70,
-      },
-      duration: 1000,
-    });
+  // Check if we're in AI summary view
+  const aiSummaryContainer = document.getElementById("ai-summary-container");
+  if (aiSummaryContainer.classList.contains("visible")) {
+    // Fade out AI summary container
+    aiSummaryContainer.classList.remove("visible");
+    
+    // Un-dim the wg container
+    document.getElementById("wg").classList.remove("dimmed");
+    
+    // After a short delay, show the original view
+    setTimeout(() => {
+      document.getElementById("cy-container").style.opacity = "1";
+      document.getElementById("members").style.opacity = "1";
+      document.getElementById("ai").style.opacity = "1";
+      document.getElementById("ai-summary").style.opacity = "1";
+      document.getElementById("created-by").style.opacity = "0.5";
+      document.getElementById("zoom-out").style.opacity = "0";
+    }, 500);
   } else {
-    // AI view
-    const layout = cy.elements().layout({
-      name: "circle", // or any other layout you prefer
-      animate: true,
-      fit: true, // whether to fit to viewport
-      padding: 70, // padding around layout
+    // Original zoom-out functionality for node/edge view
+    isEdgeView = false;
+
+    // Clear the contents of the SVG overlay
+    svg.selectAll("*").remove();
+
+    // Remove custom labels
+    document.querySelectorAll(".edge-label").forEach((el) => el.remove());
+
+    // Show all elements again
+    cy.elements().style({
+      display: "element",
+      "text-opacity": 1,
     });
 
-    layout.run();
-  }
+    // Hide UI
+    document.getElementById("zoom-out").style.opacity = "0";
+    name.style.opacity = "0";
 
-  // Optionally, zoom back out
-  // cy.animate({
-  //   fit: {
-  //     eles: cy.elements(),
-  //     padding: 50,
-  //   },
-  //   duration: 500,
-  // });
+    // Show UI
+    document.getElementById("members").style.opacity = "1";
+    document.getElementById("ai").style.opacity = "1";
+    document.getElementById("ai-summary").style.opacity = "1";
+    document.getElementById("wg").style.opacity = "1";
+    document.getElementById("created-by").style.opacity = "0.5";
+
+    if (currentView === "members") {
+      // fit
+      cy.animate({
+        fit: {
+          eles: cy.elements(),
+          padding: 70,
+        },
+        duration: 1000,
+      });
+    } else {
+      // AI view
+      const layout = cy.elements().layout({
+        name: "circle",
+        animate: true,
+        fit: true,
+        padding: 70,
+      });
+
+      layout.run();
+    }
+  }
 });
 
 // ================== MEMBERS BUTTON ==================
@@ -698,4 +714,27 @@ document.getElementById("ai").addEventListener("click", () => {
     padding: 70, // Padding around layout
     duration: 1000, // Duration of the animation in milliseconds
   }).run();
+});
+
+// ================== AI SUMMARY BUTTON ==================
+document.getElementById("ai-summary").addEventListener("click", () => {
+  // Fade out cy-container
+  document.getElementById("cy-container").style.opacity = "0";
+  
+  // Dim the wg container
+  document.getElementById("wg").classList.add("dimmed");
+  
+  // Hide buttons except zoom-out
+  document.getElementById("members").style.opacity = "0";
+  document.getElementById("ai").style.opacity = "0";
+  document.getElementById("ai-summary").style.opacity = "0";
+  document.getElementById("created-by").style.opacity = "0";
+
+  // Show zoom-out button
+  document.getElementById("zoom-out").style.opacity = "1";
+
+  // After a short delay, show the AI summary container
+  setTimeout(() => {
+    document.getElementById("ai-summary-container").classList.add("visible");
+  }, 500);
 });
