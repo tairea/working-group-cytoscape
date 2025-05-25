@@ -1,13 +1,14 @@
-# The idea
+# The One Body Problem
+The One Body Problem is the challenge of coordianting many people with different backgrounds, skills, and gifts to work as one to achieve shared goals and aspirations.
 
-This is a prototype app for how an ai might be used to match potential collaborators/conference attendees/etc. based on some similar interests/topics that could be captured from each person via a pre-workshop/conference survey perhaps.
+This is one prototype app for how an ai might be used to match potential collaborators/conference attendees/etc. based on some similar interests/topics that could be captured from each person via a pre-workshop/conference survey perhaps.
 
 most of the ui is done, but the ai recommendations were generated manually via chatgpt chat responses that i hardcoded into this prototype.
 
-but it wouldnt take much to improve on this to allow attendees/members to add profile info via a database then add an openai api call to make it more dynamic for an actual event/org/conference/etc.
+but it wouldnt take much to improve on this to allow attendees/members to add profile info via a database then add an openai api call to make it more dynamic for an actual working group/event/org/conference/etc.
 
 ## How to load the demo
-Live demo here: [https://tairea.github.io/working-group-cytoscape/](https://tairea.github.io/working-group-cytoscape/)
+Live demo here: [https://tairea.github.io/one-body-problem/](https://tairea.github.io/one-body-problem/)
 Otherwise:
 - clone the project
 - npm install
