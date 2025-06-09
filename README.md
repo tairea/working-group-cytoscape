@@ -8,7 +8,7 @@ most of the ui is done, but the ai recommendations were generated manually via c
 but it wouldnt take much to improve on this to allow attendees/members to add profile info via a database then add an openai api call to make it more dynamic for an actual working group/event/org/conference/etc.
 
 ## How to load the demo
-Live demo here: [https://tairea.github.io/one-body-problem/](https://tairea.github.io/one-body-problem/)
+Live demo here: [https://tairea.github.io/one-body/](https://tairea.github.io/one-body/)
 Otherwise:
 - clone the project
 - npm install
