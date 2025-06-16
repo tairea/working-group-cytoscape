@@ -37,6 +37,7 @@ build/
 
 # Webpack files
 .webpack/
+/stats.json
 
 # Coverage directory used by tools like istanbul
 coverage/
